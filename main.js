@@ -27,11 +27,16 @@ function my_keydown(e)
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
 	
-		if((keyPressed >=97 & keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90)){
+		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90)){
 		alphabetkey();
 		document.getElementById("d1").innerHTML="You pressed an alphabet key"
 		console.log ("alphabet key");
 		}
+		if ((keyPressed >= 48 && keyPressed<= 57)) {
+			numberkey()
+			document.getElementById("d1").innerHTML="You pressed an number key"
+		console.log ("number key");
+		} 
 	else{
 		otherkey();
 		document.getElementById("d1").innerHTML="You pressed symbol or other key";
